@@ -1,52 +1,35 @@
 import React from 'react'
 import Head from 'next/head'
-import Nav from '../components/nav'
-
+import About from './About'
+import Footer from './Footer'
 const Home = () => (
   <div>
     <Head>
-      <title>Guest House Coral</title>
+
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootst.."
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossOrigin="anonymous"/>
+        <title>Guest House Coral</title>
       <link rel="icon" href="/favicon(1).ico" />
     </Head>
 
-    <Nav />
-
-    <div className="hero">
-      <h1 className="title">Welcome to Next.js!</h1>
-      <p className="description">
-        To get started, edit <code>pages/index.js</code> and save to reload.
-      </p>
+      <div className="hero">
+        <h1 className="title">{About()} </h1>
 
       <div className="row">
-        <a href="https://nextjs.org/docs" className="card">
-          <h3>Documentation &rarr;</h3>
-          <p>Learn more about Next.js in the documentation.</p>
-        </a>
-        <a href="https://nextjs.org/learn" className="card">
-          <h3>Next.js Learn &rarr;</h3>
-          <p>Learn about Next.js by following an interactive tutorial!</p>
-        </a>
-        <a
-          href="https://github.com/zeit/next.js/tree/master/examples"
-          className="card"
-        >
-          <h3>Examples &rarr;</h3>
-          <p>Find other example boilerplates on the Next.js GitHub.</p>
-        </a>
+
       </div>
     </div>
-
+      <div className="oreo">{Footer()}</div>
     <style jsx>{`
       .hero {
         width: 100%;
-        color: #333;
+        color: white;
       }
       .title {
         margin: 0;
         width: 100%;
-        padding-top: 80px;
-        line-height: 1.15;
-        font-size: 48px;
+        line-height: 1.6;
+        font-size: 75px;
       }
       .title,
       .description {
@@ -81,6 +64,7 @@ const Home = () => (
         font-size: 13px;
         color: #333;
       }
+      
     `}</style>
   </div>
 )
