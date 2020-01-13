@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@fortawesome/react-fontawesome": "^0.1.8",
     "bootstrap": "^4.4.1",
     "next": "9.1.7",
     "react": "16.12.0",
