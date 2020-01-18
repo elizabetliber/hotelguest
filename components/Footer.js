@@ -1,4 +1,5 @@
 import React from "react";
+
 const Footer = () => (
     <div>
 
@@ -9,7 +10,7 @@ const Footer = () => (
                 <p className="card-text">+ 7(996)376-19-78</p>
                 <a href="https://goo.gl/maps/3oANPpeMFu8qa7ja9">
                     <button type="button" className="btn btn-outline-success">КАРТА</button>
-                    </a>
+                </a>
             </div>
 
         </div>

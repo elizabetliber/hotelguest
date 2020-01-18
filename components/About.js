@@ -1,22 +1,23 @@
 import React from "react";
+
 const About = () => (
-   <div>
-                   <div className="MainImageContainer">
-                       <img
-                           src="https://rosting.by/upload/iblock/b8d/109518088.jpg"
-                       />
-                       <div className="TitleContainer">
+    <div>
+        <div className="MainImageContainer">
+            <img
+                src="https://rosting.by/upload/iblock/b8d/109518088.jpg"
+            />
+            <div className="TitleContainer">
 
-                           <div className="title m-0">Guests house coral
-                               <link href="https://fonts.googleapis.com/css?family=Black+Ops+One&display=swap"
-                                     rel="stylesheet">
-                           </link>
-                           </div>
+                <div className="title m-0">Guests house coral
+                    <link href="https://fonts.googleapis.com/css?family=Black+Ops+One&display=swap"
+                          rel="stylesheet">
+                    </link>
+                </div>
 
-                       </div>
-                   </div>
+            </div>
+        </div>
 
-       <style jsx>{` 
+        <style jsx>{` 
 
 img{
   filter: brightness(75%) saturate(200%);
@@ -38,6 +39,6 @@ img{
   .title{
  font-family: 'Black Ops One', cursive; }
 `}</style>
-   </div>)
+    </div>)
 
 export default About;

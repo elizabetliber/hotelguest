@@ -2,26 +2,25 @@ import React from 'react'
 import Head from 'next/head'
 import About from '../components/About'
 import Footer from '../components/Footer'
-
+import RoomList from "./room/rooms";
 const Home = () => (
-  <div>
-    <Head>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-              integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-              crossOrigin="anonymous"/>
-              <title>Guest House Coral</title>
-      <link rel="icon" href="/favicon(1).ico"/>
-    </Head>
+    <div>
+        <Head>
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+                  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+                  crossOrigin="anonymous"/>
+            <title>Guest House Coral</title>
+            <link rel="icon" href="/favicon(1).ico"/>
+        </Head>
+        <div className="hero">
+            <h1 className="title"><About/></h1>
+        </div><br/>
 
-      <div className="hero">
-          <h1 className="title"><About/></h1>
-      </div>
-      <div className="row">
+    <RoomList/>
 
-      </div>
 
-    <Footer/>
-    <style jsx>{`
+        <Footer/>
+        <style jsx>{`
       .hero {
         width: 100%;
         color: white;
@@ -39,14 +38,11 @@ const Home = () => (
        
       }
       .row {
-       
-        max-width: 880px;
-        margin: 80px auto 40px;
-    }
+      text-align:center;}
     
       
     `}</style>
-  </div>
+    </div>
 )
 
 export default Home
