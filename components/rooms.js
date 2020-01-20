@@ -1,54 +1,43 @@
-import React from 'react'
+import React from "react";
+import Link from 'next/link'
+import rooms from '../utils/rooms'
 
-const rooms = (require) => (
-    {
-        reviews: 3,
-        id: "1",
-        beds: 1,
-        price: "900",
-        images: [ require("../images/2f_1r.jpg"), require("../images/2f_1br.jpg")],
-        header_image:[require("../images/2f_1nr.jpg")]
-    },
-    {
-        reviews: 4,
-        id: "2",
-        beds: 2,
-        price: "1200",
-        images: [require("../images/2f_3r.jpg"), require("../images/2f_3br.jpg")],
-        header_image:[require("../images/2f_3nr.jpg")]
-    },
-    {
-        reviews: 4,
-        id: "3",
-        beds: 1,
-        price: "1300",
-        images: [require("../public/rooms/2f_4r.jpg"), require("../public/rooms/2f_4br.jpg")],
-        header_image:[require("../public/rooms/2f_4nr.jpg")]
-    },
-    {
-        reviews: 3,
-        id: "4",
-        beds: 1,
-        price: "1500",
-        images: [require("../public/rooms/2f_6r.jpg"), require("../public/rooms/2f_6br.jpg")],
-        header_image:[require("../public/rooms/2f_6nr.jpg")]
-    },
-    {
-        reviews: 3,
-        id: "5",
-        beds: 1,
-        price: "1500",
-        images: [require("../public/rooms/3f_9r.jpg"), require("../public/rooms/3f_9br.jpg")],
-        header_image:[require("../public/rooms/3f_9nr.jpg")]
-    },
-    {
-        reviews: 3,
-        id: "6",
-        beds: 2,
-        price: "1500",
-        images: [require("../public/rooms/3f_10r.jpg"), require("../public/rooms/3f_10br.jpg")],
-        header_image:[require("../public/rooms/3f_10nr.jpg")]
-    }
-);
+function RoomList() {
+    return <div>
+        <div className="container">
+            <div className="row">
 
-export default rooms;
+                {rooms.map((room) => (
+                    <div className="col-6">
+                        <div key={room.id}>
+                            <Link href="/rooms/[id]" as={`/rooms/${room.id}`}>
+                                <a>
+
+                                    <div className="card">
+                                        <img src={room.images} className="card-img-top" alt="..."/>
+                                        <div className="card-body">
+                                            <p>Номер целиком · кровать {room.beds}</p>
+                                            <h3>Уютный семейный номер</h3>
+                                            <p>{room.price} руб. за ночь</p>
+                                            <p>
+                                                <strong>{room.reviews} отзыва</strong>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </Link>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+    </div>
+}
+
+<style jsx>{`
+.row{
+pointer-events: none; 
+height: 100%;
+  width: 73%;}
+`}</style>
+export default RoomList;

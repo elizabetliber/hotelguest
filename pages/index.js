@@ -2,7 +2,8 @@ import React from 'react'
 import Head from 'next/head'
 import About from '../components/About'
 import Footer from '../components/Footer'
-import RoomList from "./room/rooms";
+import RoomList from "../components/rooms";
+
 const Home = () => (
     <div>
         <Head>
@@ -14,11 +15,9 @@ const Home = () => (
         </Head>
         <div className="hero">
             <h1 className="title"><About/></h1>
-        </div><br/>
-
-    <RoomList/>
-
-
+        </div>
+        <br/>
+        <RoomList/>
         <Footer/>
         <style jsx>{`
       .hero {
