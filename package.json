@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start -p 5000"
   },
   "dependencies": {
     "@fortawesome/react-fontawesome": "^0.1.8",
