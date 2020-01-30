@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => (
     <div>
 
-        <div className="card bg-dark ">
+        <div className="card p-3 bg-dark">
             <div className="card-body">
                 <h3 className="card-title">GUEST HOUSE CORAL</h3>
                 <p className="card-text">г.Анапа, Коралловый проезд, д.19</p>
@@ -12,17 +12,16 @@ const Footer = () => (
                     <button type="button" className="btn btn-outline-success">КАРТА</button>
                 </a>
             </div>
-
         </div>
 
         <style jsx>{` 
-        .card{
-        text-align:center;
-        color: white;
-        height: 100%;
-        width: 100%;
-        
-  `}</style>
+      .card{
+      color: white;
+      text-align: center;
+      
+      }
+  
+`}</style>
     </div>)
 
 export default Footer;

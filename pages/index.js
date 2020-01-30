@@ -18,6 +18,7 @@ const Home = () => (
         </div>
         <br/>
         <RoomList/>
+        <br/>
         <Footer/>
         <style jsx>{`
       .hero {

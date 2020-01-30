@@ -1,6 +1,6 @@
 import React from "react";
 
-const About = () => (
+const About1 = () => (
     <div>
 
         <div className="card text-center">
@@ -15,7 +15,7 @@ const About = () => (
         </div>
 
         <style jsx>{` 
-  .title{
+ .title{
  font-family: 'Black Ops One', cursive;
  font-size:90px;
 
@@ -26,7 +26,8 @@ height: 300px;
 border-radius: 15px;
 box-shadow: 2px 2px 4px #000;
 }
+
 `}</style>
     </div>)
 
-export default About;
+export default About1;
