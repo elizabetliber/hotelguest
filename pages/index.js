@@ -13,9 +13,9 @@ const Home = () => (
             <title>Guest House Coral</title>
             <link rel="icon" href="/favicon(1).ico"/>
         </Head>
-        {/*<div className="hero">*/}
-        {/*    <h1 className="title"><About/></h1>*/}
-        {/*</div>*/}
+        <div className="hero">
+            <h1 className="title"><About/></h1>
+        </div>
         <br/>
         <RoomList/>
         <br/>
