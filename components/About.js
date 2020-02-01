@@ -2,7 +2,6 @@ import React from "react";
 
 const About = () => (
     <div>
-
         <div className="card text-center">
             <div className="card-body">
                 <div className="title m-5 ">Guests house coral
@@ -13,7 +12,6 @@ const About = () => (
                 </div>
             </div>
         </div>
-
         <style jsx>{` 
   .title{
  font-family: 'Black Ops One', cursive;

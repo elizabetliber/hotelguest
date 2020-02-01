@@ -2,29 +2,20 @@ import React from "react";
 
 const About1 = () => (
     <div>
+               <div className="card">
+                <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                    <a className="navbar-brand" href="http://localhost:3000/">Navbar</a>
+                    <button className="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+                </nav>
+    </div>
 
-        <div className="card text-center">
-            <div className="card-body">
-                <div className="title m-5 ">Guests house coral
-                    <link href="https://fonts.googleapis.com/css?family=Black+Ops+One&display=swap"
-                          rel="stylesheet">
-                    </link>
-
-                </div>
-            </div>
-        </div>
-
-        <style jsx>{` 
- .title{
- font-family: 'Black Ops One', cursive;
- font-size:90px;
-
- }
+    <style jsx>{` 
+ 
 .card{
-background:midnightblue;
-height: 300px;
-border-radius: 15px;
-box-shadow: 2px 2px 4px #000;
 }
 
 `}</style>
