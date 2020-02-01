@@ -61,9 +61,7 @@ height: 100%;
  h3{
  color: black;
  }
- .card{
- border-color: dark;
- }
+ 
 `}</style>
     </div>
 }
