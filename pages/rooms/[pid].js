@@ -1,6 +1,6 @@
 import rooms from '../../utils/rooms'
 import React from "react";
-import About1 from "../../components/About1";
+import About from "../../components/About";
 import Head from "next/head";
 
 const Room = (props) => {
@@ -18,7 +18,7 @@ const Room = (props) => {
         </Head>
         <div key={room.id}>
             <div className="text">
-                <About1/>
+                <About/>
                 <br/>
                 <div className="card-1">
                     <h2>Уютный семейный номер</h2>
@@ -62,11 +62,9 @@ const Room = (props) => {
         <center>
             <em><strong>{room.price} руб.</strong> за сутки</em>
             <em className="m-4">
-                <button type="button" className="btn btn-outline-success">
-                    <a href="tel:+79963761978">
+                <a href="tel:+79963761978" className="btn btn-outline-success">
                         <em>Позвонить для бронирования</em>
                     </a>
-                </button>
             </em>
         </center>
         <style jsx>{`
