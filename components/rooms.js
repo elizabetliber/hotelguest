@@ -41,8 +41,6 @@ function RoomList() {
                                                 <strong>{room.reviews} отзыва</strong>
                                             </p>
                                         </div>
-
-
                                     </div>
                                 </a>
                             </Link>
