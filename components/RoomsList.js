@@ -1,13 +1,12 @@
 import React from "react";
-import rooms from "../utils/rooms";
 import Card from "./Card";
 
-function RoomList() {
+function RoomList({ rooms }) {
   return (
     <div className="container">
       <div className="row">
         {rooms.map(room => (
-          <Card {...room} />
+          <Card key={room.id} {...room} />
         ))}
       </div>
     </div>

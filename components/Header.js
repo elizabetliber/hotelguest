@@ -17,9 +17,13 @@ const Header = () => {
       </Head>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container">
-          <Link href="/">
-            <a className="navbar-brand">Гостевой дом "Коралл"</a>
-          </Link>
+          <div className="row">
+            <div className="col">
+              <Link href="/">
+                <a className="navbar-brand">Гостевой дом "Коралл"</a>
+              </Link>
+            </div>
+          </div>
         </div>
       </nav>
     </>

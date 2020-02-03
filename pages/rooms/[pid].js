@@ -1,6 +1,8 @@
-import rooms from "../../utils/rooms";
 import React from "react";
 import Header from "../../components/Header";
+import { fetchRooms } from "../../api/rooms";
+import getNoun from "../../utils/getNoun";
+import Footer from "../../components/Footer";
 
 const Room = props => {
   const { room } = props;
@@ -8,18 +10,22 @@ const Room = props => {
     return <div>Страница не найдена</div>;
   }
 
+  const { beds, price } = room;
+
   return (
     <>
       <Header />
       <div className="container">
         <div className="row">
-          <div className="col">
+          <div className="col-md-6 offset-md-3">
             <div>
               <br />
               <div>
                 <h2>Уютный семейный номер</h2>
-                <strong>номер целиком</strong>
-                <p>1 спальня {room.beds} кровати 1 душевая</p>
+                <strong>Номер целиком</strong>
+                <p>
+                  {beds} {getNoun(beds, "кровать", "кровати", "кроватей")}
+                </p>
                 <hr />
                 <strong>Удобства в номере</strong>
                 <ul>
@@ -52,13 +58,18 @@ const Room = props => {
                 </ul>
               </div>
             </div>
-            <strong>{room.price} руб.</strong> за сутки
-            <a href="tel:+79963761978" className="btn btn-outline-success ml-3">
+            <strong>{price} руб.</strong> за сутки
+            <br />
+            <a
+              href="tel:+79963761978"
+              className="btn btn-outline-success mt-3 mb-4"
+            >
               Позвонить для бронирования
             </a>
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };
@@ -67,7 +78,11 @@ Room.getInitialProps = async params => {
   const {
     query: { pid }
   } = params;
-  const room = rooms.find(el => el.id === pid);
+  let room = null;
+  const rooms = await fetchRooms({ id: parseInt(pid) });
+  if (rooms.length === 1) {
+    room = rooms[0];
+  }
   return { room };
 };
 
