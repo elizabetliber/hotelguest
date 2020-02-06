@@ -66,7 +66,6 @@ const Room = props => {
                         >
                             Позвонить для бронирования
                         </a>
-
                         {images.map(image => (
                             <img
                                 src={image.url}
