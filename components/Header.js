@@ -13,7 +13,7 @@ const Header = () => {
           crossOrigin="anonymous"
         />
         <title>Guest House Coral</title>
-        <link rel="icon" href="/favicon(1).ico" />
+        <link rel="icon" href="https://coral-anapa.ru/favicon.ico" />
       </Head>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container">
