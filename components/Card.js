@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import getNoun from "../utils/getNoun";
 
-function Card({ id, images, price, beds, number }) {
+function Card({ id, images, price, beds, number, floor }) {
   return (
     <div className="col-md-6">
       <div>
@@ -18,7 +18,10 @@ function Card({ id, images, price, beds, number }) {
             <p>
               Номер целиком · {beds}{" "}
               {getNoun(beds, "кровать", "кровати", "кроватей")}
-              <span className="badge badge-success ml-1">Номер {number}</span>
+            </p>
+            <p>
+              <span className="badge badge-success ">Номер №{number}</span>
+              <span className="badge badge-success ml-2">{floor} этаж</span>
             </p>
             <h3>Уютный семейный номер</h3>
             <p>{price} руб. за ночь</p>

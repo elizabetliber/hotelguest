@@ -65,7 +65,7 @@ const Room = props => {
             </a>
             {images.map(image => (
               <img
-                src={image.url}
+                src={`https://imgproxy.casply.com/unsafe/s:700:700/plain/${image.url}`}
                 className="img-thumbnail mt-3 mb-4"
                 alt="..."
               />
