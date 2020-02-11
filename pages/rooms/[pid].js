@@ -3,7 +3,6 @@ import Header from "../../components/Header";
 import { fetchRooms } from "../../api/rooms";
 import getNoun from "../../utils/getNoun";
 import Footer from "../../components/Footer";
-// const url = 'http://img.example.com/pretty/image.jpg'
 const Room = props => {
   const { room } = props;
   if (!room) {
