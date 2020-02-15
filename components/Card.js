@@ -1,4 +1,5 @@
 import React from "react";
+import { UncontrolledCarousel } from "reactstrap";
 import Link from "next/link";
 import getNoun from "../utils/getNoun";
 
@@ -7,14 +8,17 @@ function Card({ id, images, price, beds, number, floor }) {
     <div className="col-md-6">
       <div>
         <div className="card mb-3">
-          {images.length > 0 && (
-            <img
-              src={`https://imgproxy.casply.com/unsafe/s:700:700/plain/${images[0].url}`}
-              className="card-img-top"
-              alt="..."
-            />
-          )}
-          <div className="card-body">
+          <UncontrolledCarousel
+            interval={false}
+            autoPlay={false}
+            items={images.map(image => ({
+              src: `https://imgproxy.casply.com/unsafe/s:700:700/plain/${image.url}`,
+              caption: "",
+              header: "",
+              key: image.id
+            }))}
+          />
+          <div className="card-body" style={{ transform: " rotate(0)" }}>
             <p>
               Номер целиком · {beds}{" "}
               {getNoun(beds, "кровать", "кровати", "кроватей")}

@@ -9,7 +9,7 @@ const Room = props => {
     return <div>Страница не найдена</div>;
   }
 
-  const { beds, price, images } = room;
+  const { number, beds, price, images } = room;
 
   return (
     <>
@@ -59,8 +59,22 @@ const Room = props => {
             </div>
             <strong>{price} руб.</strong> за сутки
             <br />
-            <a href="tel:+79963761978" className="btn btn-outline-success ">
+            <a href="tel:+79963761978" className="btn btn-outline-dark ">
               Позвонить для бронирования
+            </a>
+            <br />
+            <a
+              href={`https://wa.me/79963761978/?text=Я%20хочу%20забронировать%20номер%20${number}%20с%20число.месяц%20по%20число.месяц`}
+              className="btn btn-outline-success mt-2"
+            >
+              Написать в WhatsApp
+            </a>
+            <br />
+            <a
+              href="viber://add?number=79963761978"
+              className="btn btn-outline-primary mt-2"
+            >
+              Написать в Viber
             </a>
             {images.map(image => (
               <img
