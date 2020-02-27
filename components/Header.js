@@ -21,7 +21,7 @@ const Header = () => {
           <div className="row">
             <div className="col">
               <Link href="/">
-                <a className="navbar-brand">Гостевой дом "Коралл"</a>
+                <a className="navbar-brand">Гостевой дом "Коралловый"</a>
               </Link>
             </div>
           </div>
