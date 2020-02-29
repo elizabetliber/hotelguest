@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => (
   <div>
     <div className="p-3 bg-dark text-center text-white">
-      <h3>GUEST HOUSE CORAL</h3>
+      <h3>Гостевой дом Коралловый</h3>
       <p>г.Анапа, Коралловый проезд, д.19</p>
       <a
         href="tel:+79963761978"

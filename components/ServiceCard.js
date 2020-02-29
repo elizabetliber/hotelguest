@@ -1,6 +1,4 @@
 import React from "react";
-import Link from "next/link";
-import getNoun from "../utils/getNoun";
 
 function ServiceCard({ images, description, title }) {
   return (
@@ -8,7 +6,7 @@ function ServiceCard({ images, description, title }) {
       <div>
         <div className="card mb-3">
           {images.length > 0 && (
-            <img src={images[0].url} className="card-img-top" alt="..." />
+            <img src={`https://imgproxy.casply.com/unsafe/s:700:700/plain/${images[0].url}`} className="card-img-top" alt="..." />
           )}
           <div className="card-body">
             <h3>{title}</h3>
