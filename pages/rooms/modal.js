@@ -23,7 +23,6 @@ const ModalExample = (props) => {
             <FormGroup>
               <Label for="exampleName">Имя</Label>
               <Input modal={modal} onChange={e => setModal(e.target.value)} type="name" name="name" id="exampleName"/>
-              {modal}
             </FormGroup>
             
             <FormGroup>
