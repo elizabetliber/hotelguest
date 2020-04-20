@@ -4,7 +4,6 @@ import {fetchRooms} from "../../api/rooms";
 import getNoun from "../../utils/getNoun";
 import Footer from "../../components/Footer";
 import ModalExample from "../rooms/modal";
-import Button from "./Button";
 
 
 const Room = props => {
@@ -88,7 +87,6 @@ const Room = props => {
                 />
               ))}
               <ModalExample/>
-              <Button/>
             </div>
           </div>
         </div>
