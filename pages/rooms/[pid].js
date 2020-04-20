@@ -1,31 +1,34 @@
 import React from "react";
 import Header from "../../components/Header";
-import { fetchRooms } from "../../api/rooms";
+import {fetchRooms} from "../../api/rooms";
 import getNoun from "../../utils/getNoun";
 import Footer from "../../components/Footer";
+import ModalExample from "../rooms/modal";
+import Button from "./Button";
+
+
 const Room = props => {
-  const { room } = props;
+  const {room} = props;
   if (!room) {
     return <div>Страница не найдена</div>;
   }
-
-  const { number, beds, price, images } = room;
-
+  const {number, beds, price, images} = room;
+  
   return (
     <>
-      <Header />
+      <Header/>
       <div className="container">
         <div className="row">
           <div className="col-md-6 offset-md-3">
             <div>
-              <br />
+              <br/>
               <div>
                 <h2>Уютный семейный номер</h2>
                 <strong>Номер целиком</strong>
                 <p>
                   {beds} {getNoun(beds, "кровать", "кровати", "кроватей")}
                 </p>
-                <hr />
+                <hr/>
                 <strong>Удобства в номере</strong>
                 <ul>
                   <li>Wi Fi</li>
@@ -40,7 +43,7 @@ const Room = props => {
                   <li>Стиральная машина</li>
                   <li>Сушильная машина</li>
                 </ul>
-                <hr />
+                <hr/>
                 <h3>Правила</h3>
                 <strong>Заезда</strong>
                 <ul>
@@ -58,49 +61,54 @@ const Room = props => {
               </div>
             </div>
             <strong>{price} руб.</strong> за сутки
-            <br />
+            <br/>
             <a href="tel:+79963761978" className="btn btn-outline-dark ">
               Позвонить для бронирования
             </a>
-            <br />
+            <br/>
             <a
               href={`https://wa.me/79963761978/?text=Я%20хочу%20забронировать%20номер%20${number}%20с%20число.месяц%20по%20число.месяц`}
               className="btn btn-outline-success mt-2"
             >
               Написать в WhatsApp
             </a>
-            <br />
+            <br/>
             <a
               href="viber://add?number=79963761978"
               className="btn btn-outline-primary mt-2"
             >
               Написать в Viber
             </a>
-            {images.map(image => (
-              <img
-                src={`https://imgproxy.casply.com/unsafe/s:700:700/plain/${image.url}`}
-                className="img-thumbnail mt-3 mb-4"
-                alt="..."
-              />
-            ))}
+            <div>
+              {images.map(image => (
+                <img
+                  src={`https://imgproxy.casply.com/unsafe/s:700:700/plain/${image.url}`}
+                  className="img-thumbnail mt-3 mb-4"
+                  alt="..."
+                />
+              ))}
+              <ModalExample/>
+              <Button/>
+            </div>
           </div>
         </div>
       </div>
-      <Footer />
+      <br/>
+      <Footer/>
     </>
   );
 };
 
 Room.getInitialProps = async params => {
   const {
-    query: { pid }
+    query: {pid}
   } = params;
   let room = null;
-  const rooms = await fetchRooms({ id: parseInt(pid) });
+  const rooms = await fetchRooms({id: parseInt(pid)});
   if (rooms.length === 1) {
     room = rooms[0];
   }
-  return { room };
+  return {room};
 };
 
 export default Room;
